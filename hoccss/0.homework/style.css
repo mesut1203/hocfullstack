@@ -1,0 +1,61 @@
+/* Bai 1 */
+/* Viết CSS để thay đổi màu chữ của tất cả các thẻ
+
+. Chỉ thay đổi màu chữ của các thẻ
+
+có class text. Chỉ thay đổi màu chữ của các phần tử
+
+nằm trong div.container. */
+.container {
+    color: red;
+}
+
+.container .text {
+    color: green;
+}
+
+/* Bai 2 */
+/* Khi di chuột vào nút button, thay đổi màu nền. Khi input được focus (người dùng nhập liệu), đổi màu viền của nó. */
+.btn:hover {
+    background-color: blue;
+}
+
+.input-box:focus {
+    border-color: yellow;
+    outline: none;
+}
+
+/* Bai 3 */
+/* Tô màu chữ đỏ cho tất cả các mục có số thứ tự chẵn. Tô màu chữ xanh cho mục đầu tiên. Tô màu chữ cam cho mục cuối cùng */
+ul li:nth-of-type(even) {
+    color: red;
+}
+
+ul li:first-of-type {
+    color: green;
+}
+
+ul li:last-child {
+    color: orange;
+}
+
+/* Bai 4 */
+/* Thêm một dấu "🔥" phía trước tiêu đề. Thêm một gạch ngang dưới tiêu đề bằng ::after. */
+.title::before {
+    content: "🔥";
+}
+
+.title::after {
+    content: "-";
+}
+
+/* Bai 5 */
+/* Làm chữ cái đầu tiên của đoạn văn to hơn và có màu đỏ. Làm cho dòng đầu tiên có kiểu chữ in nghiêng. */
+.content::first-letter {
+    font-size: 50px;
+    color: red;
+}
+
+.content::first-line {
+    font-style: italic;
+}
