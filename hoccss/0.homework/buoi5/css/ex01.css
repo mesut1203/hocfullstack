@@ -1,0 +1,151 @@
+/* 1.Tạo một đoạn văn bản có nội dung bất kỳ.
+Định dạng văn bản với các thuộc tính sau:
+Màu chữ (color): Xanh dương
+Cỡ chữ (font-size): 20px
+Kiểu chữ (font-family): Arial, sans-serif
+Căn giữa văn bản (text-align) */
+p {
+    color: blue;
+    font-size: 20px;
+    font-family: "Arial", "san-serif";
+    text-align: center;
+}
+
+/* 2.Tạo một div có kích thước 300px x 200px.
+Đặt màu nền (background-color) là màu xám nhạt.
+Sử dụng hình ảnh nền (background-image) từ một URL bất kỳ.
+Căn chỉnh hình ảnh nền (background-position) ở giữa.
+Thiết lập hình ảnh nền không lặp lại (background-repeat). */
+.content {
+    width: 300px;
+    height: 200px;
+    background-color: grey;
+    background: url(https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s)
+        center no-repeat;
+}
+
+/* 3.
+ Tạo một div có kích thước 250px x 100px.
+Áp dụng viền (border) với các kiểu khác nhau:
+Viền trên: Đường liền (solid), màu đỏ, dày 3px.
+Viền phải: Đường đứt (dashed), màu xanh lá, dày 2px.
+Viền dưới: Đường chấm (dotted), màu xanh dương, dày 4px.
+Viền trái: Đường đôi (double), màu tím, dày 5px.*/
+.box {
+    width: 250px;
+    height: 100px;
+    border-top: 3px solid red;
+    border-right: 2px dashed green;
+    border-bottom: 4px dotted blue;
+    border-left: 5px blueviolet double;
+}
+
+/* 4. Tạo một div có kích thước 200px x 200px.
+Áp dụng border-radius theo các cách khác nhau:
+Trường hợp 1: Bo tròn hoàn toàn (hình tròn).
+Trường hợp 2: Chỉ bo góc trên bên trái và dưới bên phải 20px.
+Trường hợp 3: Bo góc theo tỷ lệ 50% cho hình elip.*/
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    /* border-radius: 50%; */
+    border-radius: 20px 0 20px 0;
+}
+
+.elipse {
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+/* 5.Tạo một thẻ
+có nội dung "Chào mừng bạn đến với CSS!".
+Áp dụng các thuộc tính sau:
+Màu chữ mặc định: Đen
+Khi di chuột vào (hover): Chuyển màu sang cam và thêm hiệu ứng gạch chân.
+Thêm hiệu ứng chuyển động (transition) mượt mà trong 0.3 giây. */
+
+.paragraph {
+    font-size: 30px;
+    color: black;
+}
+
+.paragraph:hover {
+    color: orange;
+    text-decoration: underline;
+    transition: ease 0.3s;
+}
+
+/* 6. Tạo một div có kích thước 400px x 300px.
+Áp dụng một trong các kiểu background gradient:
+Linear Gradient từ màu xanh dương sang màu tím.
+Radial Gradient từ màu vàng sáng ở giữa sang màu cam ở ngoài.
+Conic Gradient chia thành các phần màu khác nhau (ví dụ: xanh, đỏ, vàng).*/
+
+.gradient {
+    width: 400px;
+    height: 300px;
+}
+
+/* 7. */
+.shadow-div {
+    width: 300px;
+    height: 150px;
+    border: 4px double black;
+    outline: 2px solid blue;
+    box-shadow: 5px 5px 10px lightgray;
+}
+
+/* 8 
+Tạo một div có kích thước 300px x 150px.
+Áp dụng các thuộc tính:
+Viền đôi (border) 4px, màu đen.
+Viền bên trong (outline) 2px, màu xanh dương.
+Hiệu ứng bóng (box-shadow) với màu xám nhẹ, dịch chuyển 5px sang phải và 5px xuống dưới.*/
+.button {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+}
+
+.button:hover {
+    background-color: darkgreen;
+}
+
+/* 9. *
+Tạo một div (card) có kích thước 350px x 450px.
+Thiết lập hình ảnh nền (background-image) từ một URL.
+Sử dụng background-size để đảm bảo hình ảnh phù hợp.
+Đặt một tiêu đề trong card với chữ màu trắng, căn giữa.*/
+
+.card {
+    width: 350px;
+    height: 450px;
+    background-image: url(https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU);
+    background-color: blue;
+    background-size: cover;
+}
+
+.card h1 {
+    color: white;
+    text-align: center;
+}
+
+/* 10 
+Tạo một div có kích thước 100px x 100px.
+Đặt ảnh nền (ảnh đại diện).
+Sử dụng border-radius để làm tròn hoàn toàn.
+Thêm viền trắng 3px xung quanh avatar.*/
+.avatar {
+    width: 100px;
+    height: 100px;
+    background-image: url(https://fastly.picsum.photos/id/57/2448/3264.jpg?hmac=ewraXYesC6HuSEAJsg3Q80bXd1GyJTxekI05Xt9YjfQ);
+    border-radius: 50%;
+    border: 3px solid blue;
+    /* e dung tam mau nay vi vien trang trung mau body */
+}

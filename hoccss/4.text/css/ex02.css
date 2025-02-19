@@ -1,0 +1,14 @@
+h1 {
+    /* text-decoration: underline overline line-through; */
+    /* text-transform: capitalize;
+    letter-spacing: 8px;
+    word-spacing: 10px; */
+    text-align: center;
+}
+
+.box {
+    width: 300px;
+    border: 1px solid red;
+    text-align: justify;
+    word-wrap: break-word;
+}

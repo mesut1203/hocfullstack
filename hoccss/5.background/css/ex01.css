@@ -1,0 +1,22 @@
+body {
+    background-color: azure;
+    /* background-image: url(https://fastly.picsum.photos/id/371/500/400.jpg?hmac=c10rQsz3zy0DP1mJwYc4bDx9RLDCeBdumG97JE5h7DQ);
+    background-repeat: no-repeat; */
+    /* background-position: 10% 50%; */
+    height: 2000px;
+    /* background-attachment: scroll; */
+    background: red
+        url(https://fastly.picsum.photos/id/371/500/400.jpg?hmac=c10rQsz3zy0DP1mJwYc4bDx9RLDCeBdumG97JE5h7DQ)
+        no-repeat 0 0 / cover fixed;
+}
+/* .box {
+    background-color: aqua;
+}
+
+.box h2 {
+    background-color: red;
+}
+
+.box p {
+    background-color: yellowgreen;
+} */

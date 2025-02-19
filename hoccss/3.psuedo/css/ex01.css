@@ -1,11 +1,22 @@
-h2::before {
-    content: "A";
+/* .content {
+    display: none;
 }
 
-h2::after {
-    content: "b";
+input:checked + .content {
+    display: block;
+} */
+
+.red:checked ~ .content,
+.red:checked ~ .lbl-red {
+    color: red;
 }
 
-p::first-line{
-    
+.green:checked ~ .content,
+.green:checked ~ .lbl-green {
+    color: green;
+}
+
+.blue:checked ~ .content,
+.blue:checked ~ .lbl-blue {
+    color: blue;
 }
