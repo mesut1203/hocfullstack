@@ -1,0 +1,23 @@
+.box {
+    border: 1px solid red;
+    margin: 30px auto;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+span {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: inline-block;
+}
+
+span:nth-child(1) {
+}
+
+span:nth-child(2) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

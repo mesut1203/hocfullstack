@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.products {
+    background-color: aqua;
+    padding: 30px 0;
+}
+.products-heading {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto 30px;
+}
+
+.products-list {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.products-list .products-item {
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    font-size: initial;
+    padding: 0 10px;
+}
+
+.products-list .products-item img {
+    width: 100%;
+}
+
+.products-list .products-item h3 a {
+    color: black;
+    text-decoration: none;
+}
