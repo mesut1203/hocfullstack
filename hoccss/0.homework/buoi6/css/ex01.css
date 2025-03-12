@@ -3,3 +3,34 @@
     margin: 0;
     padding: 0;
 }
+
+#modal:checked + .modal {
+    display: block;
+}
+
+.modal {
+    display: none;
+}
+
+.modal-dialog {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    right: 0;
+    width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000085;
+}

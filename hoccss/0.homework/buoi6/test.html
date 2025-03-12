@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modal CSS</title>
+        <link rel="stylesheet" href="css/test.css" />
+    </head>
+    <body>
+        <h1 class="title">Unicode Academy</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            autem pariatur voluptates nulla suscipit?
+        </p>
+
+        <!-- Nút mở modal -->
+        <label for="modal">
+            <button class="open-modal">Mở modal</button>
+        </label>
+
+        <!-- Checkbox ẩn để điều khiển modal -->
+        <input type="checkbox" id="modal" class="modal-checkbox" />
+
+        <!-- Modal -->
+        <div class="modal-overlay">
+            <label for="modal" class="modal-background"></label>
+            <!-- Click ra ngoài để tắt -->
+            <div class="modal-content">
+                <h2 class="modal-title">Modal Title</h2>
+                <p class="modal-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Temporibus dolores, numquam veritatis aliquid eum error
+                    quidem possimus perferendis aspernatur accusantium similique
+                    praesentium laudantium reprehenderit fugit aperiam, quia
+                    ipsam? Vitae, dicta.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

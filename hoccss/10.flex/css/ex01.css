@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 600px;
+    height: 500px;
+    border: 1px solid red;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.item {
+    padding: 20px;
+    /* border: 1px solid #fff; */
+    background: green;
+    color: #fff;
+}

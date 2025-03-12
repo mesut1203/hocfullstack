@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.modal {
+    position: relative;
+}
+
+.md-img {
+    background: #fff;
+    padding: 50px;
+}
+
+.modal-smallimg {
+    position: absolute;
+    /* top: 55%; */
+    left: 0;
+    right: 0;
+    /* background: yellow; */
+    bottom: 0;
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.img {
+    display: inline-block;
+}
+
+.modal-text {
+    /* position: absolute;
+    top: 0;
+    left: 116%;
+    width: 700px; */
+    display: inline-block;
+    vertical-align: top;
+    font-size: initial;
+    color: #fff;
+    /* margin: 20px 20px; */
+    padding: 20px;
+}
+
+p {
+    display: inline-block;
+    padding: 10px;
+}
+
+span {
+    font-weight: bold;
+    font-size: 30px;
+}

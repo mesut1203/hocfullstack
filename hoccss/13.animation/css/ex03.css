@@ -1,0 +1,37 @@
+*,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 20px solid grey;
+    border-radius: 50%;
+    position: relative;
+}
+
+.box::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    border: 20px solid yellow;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border-color: yellow transparent transparent;
+    animation-name: loader;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
+}

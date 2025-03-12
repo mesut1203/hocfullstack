@@ -1,10 +1,10 @@
-/* .content {
+.content {
     display: none;
 }
 
 input:checked + .content {
     display: block;
-} */
+}
 
 .red:checked ~ .content,
 .red:checked ~ .lbl-red {

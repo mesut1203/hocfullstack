@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    position: relative;
+    margin: 30px auto;
+    display: block;
+    padding: 10px 30px;
+    border-radius: 999px;
+    background-color: green;
+    color: #fff;
+    border: 0;
+    overflow: hidden;
+}
+
+button:hover::before {
+    background-color: red;
+    width: 50%;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: red;
+    width: 0;
+    transition: width 0.3s;
+}
+
+span {
+    position: relative;
+    z-index: 1;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: red;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s;
+}
+
+button:hover::after {
+    background-color: red;
+    width: 50%;
+}
+
