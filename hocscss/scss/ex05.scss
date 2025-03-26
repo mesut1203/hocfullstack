@@ -1,0 +1,7 @@
+@use "partial/reset";
+@use "partial/header";
+// @use "partial/variable";
+
+body {
+    color: header.$secondary-color;
+}

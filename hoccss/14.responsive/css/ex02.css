@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+.hero-section {
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    height: 700px;
+}
+
+/* heading */
+.hero-heading {
+    width: 40%;
+}
+
+.hero-heading h1 {
+    color: #2c2c2c;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.31; /* 48.225px */
+}
+
+.hero-heading h2 {
+    color: #2c2c2c;
+    font-size: 43px;
+    font-weight: 800;
+    padding-bottom: 27px;
+}
+
+.hero-heading p {
+    width: 90%;
+    color: #2c2c2c;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.27; /* 127.604% */
+}
+
+/*Hero Item */
+.hero-item {
+    background-color: #dcffca;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.hero-item img {
+    width: 60%;
+    margin-left: -60px;
+}
+
+.hero-item span {
+    width: 600px;
+    display: block;
+    height: 600px;
+    color: #0e60002d;
+    font-size: 166px;
+    font-weight: 800;
+    line-height: 1; /* 166.667px */
+    transform: rotate(90deg);
+    right: 26px;
+    position: absolute;
+}
+
+/* Responsive section */
+@media screen and (max-width: 1399.98px) {
+    .container {
+        padding: 0 15px;
+    }
+    .hero .hero-item span {
+        font-size: 12vw;
+        position: absolute;
+        top: calc(50% - 200px);
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-heading {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-item {
+        width: 100%;
+        position: relative;
+        display: flex;
+        padding: 50px 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-item span {
+        width: 300px;
+        height: auto;
+        display: block;
+        /* margin-right: 80px; */
+    }
+
+    .hero-item img {
+        /* margin-right: 200px; */
+        width: 50%;
+    }
+}
+@media screen and (max-width: 791.98px) {
+    .hero .hero-item span {
+        position: static;
+        font-size: 14vw;
+        transform: rotate(0deg);
+        text-align: center;
+        width: 50%;
+        height: inherit;
+    }
+
+    .hero .hero-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero .hero-item img {
+        margin: 0 auto;
+    }
+}

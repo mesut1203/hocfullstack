@@ -1,0 +1,26 @@
+$primary-color: green;
+$secondary-color: red;
+$font-family: Roboto, sans-serif;
+$size: 10;
+$selector: "column-large";
+$property: background-color;
+
+body {
+    color: $primary-color;
+    font-family: $font-family;
+    font-size: #{$size * 5}px;
+}
+
+.#{$selector} {
+    color: red;
+    #{$property}: yellow;
+}
+
+.header {
+    $header-bg: gray; // Biến cục bộ chỉ dùng trong selector đã khai báo  //
+    padding: 30px;
+    .header-row {
+        display: flex;
+        background: $header-bg;
+    }
+}

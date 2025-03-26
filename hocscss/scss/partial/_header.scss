@@ -1,0 +1,16 @@
+@use "./variable" as v; //namespace là mặc định tên file
+
+@forward "./variable";
+$-header-padding: 30px;
+
+.header {
+    padding: 0 $-header-padding;
+    background-color: v.$primary-color;
+    .header-row {
+        border: 1px solid red;
+    }
+}
+
+.box {
+    margin: $-header-padding;
+}

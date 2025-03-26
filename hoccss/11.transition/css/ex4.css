@@ -54,5 +54,5 @@
 }
 
 .container input:checked ~ .checkmark {
-    background-color: grey;
+    background-color: #bababa;
 }

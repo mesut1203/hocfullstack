@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/partial/_reset.scss","../scss/partial/_header.scss","../scss/partial/_variable.scss","../scss/ex05.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;;ACEJ;EACI;EACA,kBCPW;;ADQX;EACI;;;AAIR;EACI,QAXc;;;AEClB;EACI,ODJa","file":"ex05.css"}

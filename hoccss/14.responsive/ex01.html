@@ -9,6 +9,7 @@
     <body>
         <div class="container">
             <div class="header-row">
+                <input type="checkbox" id="check" hidden />
                 <div class="logo">
                     <a href="#">
                         <img
@@ -39,14 +40,17 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="hidden"></div>
 
                 <button>Contact</button>
-                <div class="icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+
+                <label for="check" class="open-menu">
+                    <div class="icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                <label for="check" class="modal-overlay"></label>
             </div>
         </div>
     </body>

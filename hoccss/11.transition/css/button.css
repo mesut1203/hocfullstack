@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    padding: 30px;
+}
+
+.toggle {
+    display: block;
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: grey;
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+}
+
+.toggle_input {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    border: 1px solid red;
+    transition: left 0.3s;
+    z-index: 1;
+}
+
+input:checked + .toggle_input {
+    left: calc(100% - 41px);
+}
+
+/* .toggle-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background 0.3s;
+} */
+
+input:checked ~ .toggle-fill {
+    background: green;
+}

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 0 30px;
+  background-color: green;
+}
+.header .header-row {
+  border: 1px solid red;
+}
+
+.box {
+  margin: 30px;
+}
+
+body {
+  color: yellow;
+}
+
+/*# sourceMappingURL=ex05.css.map */

@@ -6,7 +6,7 @@
 
 .container {
     max-width: 1200px;
-    margin: 15px 15px;
+    margin: 15px auto;
 }
 
 .header-row {
@@ -44,17 +44,35 @@ button {
     font-weight: bold;
 }
 
+@media screen and (max-width: 1200.98px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
 @media screen and (max-width: 991.98px) {
-    .menu {
+    .menu ul {
         display: block;
         position: fixed;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background: red;
+        background: black;
         top: 0;
+        width: 250px;
         left: 0;
+        translate: -100%;
         bottom: 0;
+        transition: 0.4s ease;
+        z-index: 1;
+    }
+
+    .menu ul li {
+        padding-top: 40px;
+    }
+    .menu ul li a {
+        padding-top: 10px;
+        color: #fff;
     }
 
     .icon {
@@ -69,20 +87,33 @@ button {
         display: block;
     }
 
+    #check:checked ~ .menu ul {
+        translate: 0;
+    }
+
     button {
         margin-left: auto;
         margin-right: 10px;
+    }
+    .modal-overlay {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #00000085;
+        transition: 2s ease;
+    }
+    #check:checked ~ .modal-overlay {
+        opacity: 1;
+        visibility: visible;
     }
 }
 
 @media screen and (max-width: 767.98px) {
     button {
         display: none;
-    }
-}
-
-@media screen and (max-width: 610px) {
-    .menu {
-        display: flex;
     }
 }

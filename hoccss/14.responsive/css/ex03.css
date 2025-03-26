@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Rajdhani, "sans-serif";
+}
+
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.landing {
+    background: url(https://hoanganf8.github.io/htmlcss_project02/image/landing-background.jpg)
+        0 0 / cover;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.landing .wrapper .wrapper-title {
+    width: 50%;
+    text-align: center;
+}
+
+.landing .wrapper .wrapper-title span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+}
+
+.landing .wrapper .wrapper-title h1 {
+    font-size: 6.5rem;
+    font-weight: 900;
+}
+.landing .wrapper .wrapper-title p {
+    width: 331px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* .button {
+    width: 400px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
+    margin: 10px auto;
+    display: flex;
+}
+
+.button label:first-child {
+    border: 1px solid #fff;
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.button label:last-child {
+    border: 1px solid #fff;
+    background-color: transparent;
+    width: 50%;
+    border-top-right-radius: 10px;
+
+    border-bottom-right-radius: 10px;
+} */
+
+.modal-toggle {
+    width: 400px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 54px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.modal-toggle .modal-login {
+    border: 1px solid #fff;
+    width: 50%;
+    background: #fff;
+    color: #3e3f5e;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.modal-toggle .modal-register {
+    border: 1px solid #fff;
+    background-color: transparent;
+    width: 50%;
+    border-top-right-radius: 10px;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+}
+
+#toggle:checked ~ .wrapper-title .modal-register {
+    background-color: #fff;
+    color: #3e3f5e;
+}
+#toggle:checked ~ .wrapper-title .modal-login {
+    background: transparent;
+}
+/* Active button */
+
+/* Form login */
+.landing .landing-form {
+    background-color: #fff;
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    /* display: none; */
+}
+
+.landing-action {
+    padding: 0 15px;
+}
+
+.landing-form .landing-action h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.input-group {
+    padding: 20px 0;
+    position: relative;
+}
+
+.input-group label {
+    position: absolute;
+    top: 59px;
+    left: 30px;
+    font-size: 1rem;
+    transform: translateY(-120%);
+    color: #3e3f5e;
+    transition: 0.3s ease;
+}
+
+.input-group input {
+    font-size: 1rem;
+    height: 54px;
+    width: 100%;
+    padding: 0 32px;
+    color: #3e3f5e;
+    border: 1px solid #dedeea;
+    border-radius: 10px;
+    outline: none;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: 32px;
+    font-size: 0.8rem;
+    background: #fff;
+    padding: 0 5px;
+}
+
+/* Checkbox */
+.label-hamburger .checkmark::before,
+.label-hamburger .checkmark::after {
+    content: "";
+    width: 21px;
+    height: 5px;
+    background-color: #23d2e2;
+    display: inline-block;
+    top: 48.25%;
+    right: 92%;
+    display: none;
+}
+
+.label-hamburger {
+    display: flex;
+    gap: 14px;
+    font-weight: 700;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.label-hamburger .checkmark {
+    display: flex;
+    flex-direction: column;
+    order: -1;
+}
+
+.label-hamburger .checkmark::before {
+    rotate: 45deg;
+    position: absolute;
+}
+
+.label-hamburger .checkmark::after {
+    rotate: -45deg;
+    position: absolute;
+}
+
+.checkmark {
+    width: 28px;
+    height: 28px;
+    display: block;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.label-hamburger input {
+    display: none;
+}
+
+.label-hamburger input:checked ~ .checkmark::before,
+.label-hamburger input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-action .form-row a {
+    text-decoration: none;
+    color: #adafca;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+.landing-action .form-row a:hover {
+    color: #615dfa;
+}
+
+.landing-action button {
+    width: 100%;
+    border: none;
+    background: #615dfa;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin: 20px 0;
+}
+
+.landing-action p {
+    text-align: center;
+}
+
+/* Form-register */
+.landing .landing-register {
+    background-color: #fff;
+    width: 600px;
+    height: 919px;
+    border-radius: 10px;
+    position: absolute;
+    right: 9%;
+}
+
+.landing-register .landing-action {
+    padding: 0 15px;
+}

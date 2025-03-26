@@ -1,0 +1,27 @@
+// 
+/* Comment css */ 
+.header {
+    padding: 30px;
+    .header-row {
+        color: red;
+        .logo {
+            width: 200px;
+        }
+        .menu {
+            display: none;
+            > li {
+                ~ a {
+                    text-decoration: none;
+                    &::after {
+                        content: "";
+                    }
+                }
+            }  
+        }
+        .search {
+            input[type="text"] {
+                border: 0;
+            }
+        }
+    }
+}

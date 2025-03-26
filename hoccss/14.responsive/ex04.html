@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="button">
+            <input type="radio" id="login" name="toggle" checked hidden />
+            <input type="radio" id="register" name="toggle" hidden />
+
+            <label for="login" class="login">Login</label>
+            <label for="register" class="register">Register</label>
+        </div>
+
+        <style>
+            /* Container chính */
+            .button {
+                width: 400px;
+                height: 50px;
+                font-size: 1rem;
+                font-weight: 700;
+                text-align: center;
+                margin: 10px auto;
+                display: flex;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 2px solid #fff;
+            }
+
+            /* Style chung cho label */
+            .button label {
+                width: 50%;
+                line-height: 50px;
+                cursor: pointer;
+                transition: 0.3s;
+                text-align: center;
+                user-select: none;
+            }
+
+            /* Mặc định: Login có màu trắng, Register trong suốt */
+            .login {
+                background-color: #fff;
+                color: black;
+            }
+
+            .register {
+                background-color: transparent;
+                color: #fff;
+                border-left: 2px solid #fff;
+            }
+
+            /* Khi chọn Register */
+            #register:checked ~ .register {
+                background-color: #fff;
+                color: black;
+            }
+
+            #register:checked ~ .login {
+                background-color: transparent;
+                color: #fff;
+            }
+
+            /* Khi chọn Login */
+            #login:checked ~ .login {
+                background-color: #fff;
+                color: black;
+            }
+
+            #login:checked ~ .register {
+                background-color: transparent;
+                color: #fff;
+            }
+
+            /* Hover hiệu ứng */
+            .button label:hover {
+                opacity: 0.8;
+            }
+        </style>
+    </body>
+</html>

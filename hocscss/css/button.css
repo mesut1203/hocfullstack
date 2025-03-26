@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  margin: 20px auto;
+  display: flex;
+  width: 300px;
+  gap: 10px;
+}
+.box .btn-default {
+  width: 150px;
+  height: 50px;
+  border-radius: 999px;
+  background-color: green;
+  border: none;
+  color: #fff;
+  padding: 0 5px;
+}
+.box .btn-default:hover {
+  background-color: red;
+}
+.box .btn-outline {
+  width: 150px;
+  height: 50px;
+  border-radius: 999px;
+  background-color: #fff;
+  border: 2px solid green;
+  color: green;
+  outline: none;
+  padding: 0 5px;
+}
+.box .btn-outline:hover {
+  border: 2px solid red;
+  color: red;
+}
+
+/*# sourceMappingURL=button.css.map */

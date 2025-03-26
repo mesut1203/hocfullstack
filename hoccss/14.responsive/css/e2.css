@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 15px 15px;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Menu mặc định trên desktop */
+.menu {
+    margin-left: auto;
+}
+.menu a {
+    padding: 8px 21px;
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+}
+.menu ul {
+    display: flex;
+}
+
+.menu ul li {
+    list-style: none;
+    color: black;
+}
+
+button {
+    padding: 5px 0;
+    color: white;
+    background-color: aqua;
+    border: none;
+    width: 120px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Khi màn hình nhỏ hơn 991.98px */
+@media screen and (max-width: 991.98px) {
+    /* Ẩn menu ngang */
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background: black;
+        transition: left 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        padding: 15px 0;
+    }
+
+    .menu ul li a {
+        font-size: 18px;
+        color: white;
+    }
+
+    /* Hamburger menu */
+    .open-menu {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .icon span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: black;
+        border-radius: 3px;
+    }
+
+    /* Khi checkbox được check, menu trượt vào */
+    #menu-toggle:checked ~ .menu {
+        left: 0;
+    }
+
+    /* Giữ button Contact */
+    button {
+        display: block;
+    }
+}
+
+/* Ẩn button Contact khi xuống dưới 767.98px */
+@media screen and (max-width: 767.98px) {
+    button {
+        display: none;
+    }
+}
