@@ -18,7 +18,6 @@
         <section class="landing">
             <div class="container">
                 <div class="wrapper">
-                    <input type="checkbox" id="toggle" />
                     <div class="wrapper-title">
                         <span>Welcome to</span>
                         <h1>Vikinger</h1>
@@ -29,17 +28,30 @@
                         </p>
 
                         <div class="modal-toggle">
-                            <label class="modal-login" for="toggle"
+                            <input
+                                type="radio"
+                                name="toggle"
+                                id="login-radio"
+                                checked
+                                hidden
+                            />
+                            <label class="modal-login" for="login-radio"
                                 >Login</label
                             >
-                            <label class="modal-register" for="toggle"
+                            <input
+                                type="radio"
+                                name="toggle"
+                                id="register-radio"
+                                hidden
+                            />
+                            <label class="modal-register" for="register-radio"
                                 >Register</label
                             >
                         </div>
                     </div>
                     <div class="landing-form">
                         <div class="landing-action">
-                            <form action="">
+                            <form class="form-login" action="">
                                 <h2>Account Login</h2>
                                 <div class="input-group">
                                     <input type="text" required />
@@ -63,31 +75,40 @@
                                     <i class="fa-brands fa-square-facebook"></i>
                                 </div>
                             </form>
-                        </div>
-                    </div>
-                    <!-- <div class="landing-register">
-                        <div class="landing action">
-                            <form action="">
-                                <h2>Create your Account!</h2>
-                                <div class="input-grou">
+                            <form action="" class="form-register">
+                                <h2>Create an Account</h2>
+                                <div class="input-group">
                                     <input type="text" required />
                                     <label for="">Your Email</label>
                                 </div>
-                                <div class="input-grou">
+                                <div class="input-group">
                                     <input type="text" required />
-                                    <label for="">Username</label>
+                                    <label for="">Name</label>
                                 </div>
-                                <div class="input-grou">
+                                <div class="input-group">
                                     <input type="password" required />
                                     <label for="">Password</label>
                                 </div>
-                                <div class="input-grou">
+                                <div class="input-group">
                                     <input type="password" required />
                                     <label for="">Repeat Password</label>
                                 </div>
+                                <div class="form-row">
+                                    <label class="label-hamburger"
+                                        >Send me news and updates via email
+                                        <input type="checkbox" />
+                                        <span class="checkmark"> </span>
+                                    </label>
+                                </div>
+                                <button>Register Now</button>
+                                <p>
+                                    You'll receive a confirmation email in your
+                                    inbox with a link to activate your account.
+                                    If you have any problems, contact us!/p>
+                                </p>
                             </form>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>

@@ -89,8 +89,7 @@ body {
 .modal-toggle .modal-login {
     border: 1px solid #fff;
     width: 50%;
-    background: #fff;
-    color: #3e3f5e;
+    color: #fff;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -104,29 +103,38 @@ body {
     border-bottom-right-radius: 10px;
 }
 
-#toggle:checked ~ .wrapper-title .modal-register {
+#login-radio:checked + .modal-login {
     background-color: #fff;
     color: #3e3f5e;
+    transition: 0.3s ease-in-out;
 }
-#toggle:checked ~ .wrapper-title .modal-login {
-    background: transparent;
+
+#register-radio:checked + .modal-register {
+    background-color: #fff;
+    color: #3e3f5e;
+    transition: 0.3s ease-in-out;
 }
 /* Active button */
 
 /* Form login */
-.landing .landing-form {
+
+.landing .form-login {
     background-color: #fff;
-    width: 500px;
+    width: 484px;
     height: 600px;
     border-radius: 10px;
     position: absolute;
-    top: 10%;
-    right: 15%;
-    /* display: none; */
+    top: 13%;
+    right: 12%;
+    transform: translateX(200%);
 }
 
-.landing-action {
+/* .landing-action {
     padding: 0 15px;
+} */
+
+.landing-action .form-login {
+    padding: 30px 30px;
 }
 
 .landing-form .landing-action h2 {
@@ -168,7 +176,7 @@ body {
     padding: 0 5px;
 }
 
-/* Checkbox */
+/* Checkbox login*/
 .label-hamburger .checkmark::before,
 .label-hamburger .checkmark::after {
     content: "";
@@ -176,8 +184,8 @@ body {
     height: 5px;
     background-color: #23d2e2;
     display: inline-block;
-    top: 48.25%;
-    right: 92%;
+    top: 53.4%;
+    right: 85.5%;
     display: none;
 }
 
@@ -253,15 +261,15 @@ body {
 }
 
 /* Form-register */
-.landing .landing-register {
+.landing-action .form-register {
     background-color: #fff;
-    width: 600px;
-    height: 919px;
+    width: 484px;
+    height: 600px;
     border-radius: 10px;
     position: absolute;
-    right: 9%;
+    top: 13%;
+    right: 12%;
+    padding: 30px 30px;
 }
 
-.landing-register .landing-action {
-    padding: 0 15px;
-}
+
