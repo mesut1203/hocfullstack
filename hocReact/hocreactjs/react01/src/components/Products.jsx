@@ -1,0 +1,40 @@
+import React from "react";
+import Product from "./Product";
+import attribute from "./Attribute";
+
+export default function Products() {
+    const products = [
+        {
+            id: 1,
+            name: "Product 1",
+            price: 12000,
+            isActive: true,
+        },
+        {
+            id: 2,
+            name: "Product 2",
+            price: 10000,
+            isActive: false,
+            attribute: ["Attribute 1", "Attribute 2"],
+        },
+        {
+            id: 3,
+            name: "Product 3",
+            price: 14000,
+            isActive: false,
+            attribute: ["Attribute 1", "Attribute 2", "Attribute 3"],
+        },
+    ];
+    return (
+        <div>
+            <h1>Products</h1>
+            <div className="products">
+                {products.map((product) => (
+                    <Product key={product.id} product={product} />
+                ))}
+            </div>
+        </div>
+    );
+}
+
+

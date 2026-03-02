@@ -1,63 +1,84 @@
-const WebSocket = require("ws");
-const wss = new WebSocket.Server({ port: 8000 });
+import React, { useState, useEffect, useRef } from "react";
+import { io } from "socket.io-client";
+const socket = io("http://localhost:8080");
 
-const getClientId = () => Date.now() + Math.random() * 1000;
-const messageList = [];
+export default function App() {
+    const [message, setMessage] = useState("");
+    const [messageList, setMessageList] = useState([]);
+    const messageScroll = useRef(null);
 
-wss.on("connection", (ws) => {
-    console.log("Đã kết nối websocket");
-    ws.clientId = getClientId();
-
-    // Khi có client mới: gửi lại số người online cho tất cả
-    wss.clients.forEach(client => {
-        if (client.readyState === WebSocket.OPEN) {
-            client.send(JSON.stringify({
-                type: "online-count",
-                payload: wss.clients.size
-            }));
-        }
-    });
-
-    ws.on("message", (msg) => {
-        const { type, payload } = JSON.parse(msg);
-
-        if (type === "send-message") {
-            messageList.push(payload);
-
-            // Gửi danh sách tin nhắn mới cho tất cả
-            wss.clients.forEach(client => {
-                if (client.readyState === WebSocket.OPEN) {
-                    client.send(JSON.stringify({
-                        type: "new-message",
-                        payload: messageList
-                    }));
-                }
-            });
-        }
-
-        if (type === "typing") {
-            // Thông báo cho những người khác (trừ người đang gõ)
-            wss.clients.forEach(client => {
-                if (client !== ws && client.readyState === WebSocket.OPEN) {
-                    client.send(JSON.stringify({
-                        type: "typing",
-                        payload
-                    }));
-                }
-            });
-        }
-    });
-
-    ws.on("close", () => {
-        console.log("Đóng kết nối websocket");
-        // Khi 1 client rời đi, gửi lại số người online
-        wss.clients.forEach(client => {
-            if (client.readyState === WebSocket.OPEN) {
-                client.send(JSON.stringify({
-                    type: "online-count",
-                    payload: wss.clients.size
-                }));
-            }
+    useEffect(() => {
+        socket.on("connect", () => {
+            console.log("Connected to server");
         });
-    });
-});
+        socket.on("disconnect", () => {
+            console.log("Disconnected from server");
+        });
+
+        // nhận toàn bộ tin nhắn
+        socket.on("message-list", (data) => {
+            setMessageList(data);
+        });
+
+        // nhận tin nhắn mới
+        socket.on("new-message", (data) => {
+            setMessageList((prev) => [...prev, data]); // functional update
+        });
+
+        socket.emit("load-message");
+
+        // cleanup
+        return () => {
+            socket.off("connect");
+            socket.off("disconnect");
+            socket.off("message-list");
+            socket.off("new-message");
+        };
+    }, []);
+
+    // auto scroll xuống cuối mỗi khi có tin nhắn mới
+    useEffect(() => {
+        if (messageScroll.current) {
+            messageScroll.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [messageList]);
+
+    const handleChange = (e) => setMessage(e.target.value);
+
+    const handleSendMessage = (e) => {
+        e.preventDefault();
+        if (!message.trim()) return;
+        socket.emit("send-message", message);
+        setMessage("");
+    };
+
+    return (
+        <div>
+            <h1>Chat box</h1>
+            <div
+                style={{
+                    height: "400px",
+                    width: "300px",
+                    overflowY: "auto",
+                    border: "1px solid #ccc",
+                }}
+            >
+                {messageList.map((item, index) => (
+                    <p key={index}>{item}</p>
+                ))}
+                <div ref={messageScroll} />
+            </div>
+
+            <form onSubmit={handleSendMessage}>
+                <input
+                    type="text"
+                    placeholder="Tin nhắn..."
+                    onChange={handleChange}
+                    value={message}
+                    required
+                />
+                <button>Gửi</button>
+            </form>
+        </div>
+    );
+}

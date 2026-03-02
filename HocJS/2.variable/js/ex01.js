@@ -33,4 +33,4 @@ const PRICE_ONE = 1200;
 console.log("timeout:", TIMEOUT);
 
 // lưu ý:
-// hằng số được khai áo ngay đầu chương trình --> nên viết hoa tên hăng bằng gachj  dưới
+// hằng số được khai áo ngay đầu chương trình --> nên viết hoa tên hăng bằng gach  dưới

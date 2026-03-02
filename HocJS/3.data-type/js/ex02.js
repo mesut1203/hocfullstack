@@ -20,9 +20,9 @@
 // Lưu ý: Giá trị nào không chuyển sang số sẽ chuyển NaU
 
 // 3. Ép cắc kiểu dữ liệu sang Boolean
-let a = "";
-a = Boolean(a);
-console.log(a, typeof a);
+// let a = "";
+// a = Boolean(a);
+// console.log(a, typeof a);
 /*
 các gtri sau false "",0 , null, false, NaN, false
 */

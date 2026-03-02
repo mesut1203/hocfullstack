@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        .pagination .active {
+            color: red;
+        }
+    </style>
+    <body>
+        <input type="search" class="search" placeholder="Nhập từ khóa..." />
+        <button class="last-btn">Moi nhat</button>
+        <button class="old-btn">Cu nhat</button>
+        <!-- <button></button> -->
+        <table width="100%" border="1" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên</th>
+                    <th>Name</th>
+                    <th width="5%">Sửa</th>
+                    <th width="5%">Xóa</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <hr />
+        <div class="pagination"></div>
+        <form>
+            <h1>Thêm người dùng</h1>
+            <div>
+                <label>Tên</label>
+                <input class="name" type="text" placeholder="Tên..." />
+            </div>
+            <div class="emall-errol">
+                <label>Email</label>
+                <input class="email" type="email" placeholder="Email..." />
+                <p></p>
+            </div>
+            <div>
+                <label>Địa chỉ</label>
+                <input class="address" type="text" placeholder="Địa chỉ..." />
+            </div>
+            <button type="submit">Thêm</button>
+        </form>
+        <script src="js/ex1.js"></script>
+    </body>
+</html>

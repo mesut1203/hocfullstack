@@ -66,13 +66,13 @@ if() {
 // }
 
 //  tính tiền taxi
-let distance = 200;
-let price;
-if (distance <= 1) {
-    price = 15000;
-} else if (distance > 1 && distance <= 5) {
-    price = 15000 + (distance - 1) * 13500;
-} else if (distance > 5) {
-    price = 15000 + 4 * 13500 + (distance - 5) * 11000;
-}
-console.log(price);
+// let distance = 200;
+// let price;
+// if (distance <= 1) {
+//     price = 15000;
+// } else if (distance > 1 && distance <= 5) {
+//     price = 15000 + (distance - 1) * 13500;
+// } else if (distance > 5) {
+//     price = 15000 + 4 * 13500 + (distance - 5) * 11000;
+// }
+// console.log(price);

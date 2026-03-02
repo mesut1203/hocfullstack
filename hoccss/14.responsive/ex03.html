@@ -18,8 +18,21 @@
         <section class="landing">
             <div class="container">
                 <div class="wrapper">
+                    <input
+                        type="radio"
+                        name="toggle"
+                        id="login-radio"
+                        checked
+                        hidden
+                    />
+                    <input
+                        type="radio"
+                        name="toggle"
+                        id="register-radio"
+                        hidden
+                    />
                     <div class="wrapper-title">
-                        <span>Welcome to</span>
+                        <span>WELCOME TO</span>
                         <h1>Vikinger</h1>
                         <p>
                             The next generation social network & community!
@@ -28,22 +41,10 @@
                         </p>
 
                         <div class="modal-toggle">
-                            <input
-                                type="radio"
-                                name="toggle"
-                                id="login-radio"
-                                checked
-                                hidden
-                            />
                             <label class="modal-login" for="login-radio"
                                 >Login</label
                             >
-                            <input
-                                type="radio"
-                                name="toggle"
-                                id="register-radio"
-                                hidden
-                            />
+
                             <label class="modal-register" for="register-radio"
                                 >Register</label
                             >
@@ -54,12 +55,18 @@
                             <form class="form-login" action="">
                                 <h2>Account Login</h2>
                                 <div class="input-group">
-                                    <input type="text" required />
-                                    <label for="">Username or Email</label>
+                                    <input type="text" id="username" required />
+                                    <label for="username"
+                                        >Username or Email</label
+                                    >
                                 </div>
                                 <div class="input-group">
-                                    <input type="password" required />
-                                    <label for="">Password</label>
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        required
+                                    />
+                                    <label for="password">Password</label>
                                 </div>
                                 <div class="form-row">
                                     <label class="label-hamburger"
@@ -70,28 +77,61 @@
                                     <a href="#">Forgot Password</a>
                                 </div>
                                 <button>Login to your account</button>
-                                <p>Login with your Social Account</p>
-                                <div class="icon">
-                                    <i class="fa-brands fa-square-facebook"></i>
+
+                                <p class="lined-text">
+                                    Login with your Social Account
+                                </p>
+                                <div class="social-link">
+                                    <div
+                                        class="icon"
+                                        style="background-color: #3763d2"
+                                    >
+                                        <i
+                                            class="fa-brands fa-square-facebook"
+                                        ></i>
+                                    </div>
+                                    <div
+                                        class="icon"
+                                        style="background-color: #1abcff"
+                                    >
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </div>
+                                    <div
+                                        class="icon"
+                                        style="background-color: #7b5dfa"
+                                    >
+                                        <i class="fa-brands fa-twitch"></i>
+                                    </div>
+                                    <div
+                                        class="icon"
+                                        style="background-color: #fd434f"
+                                    >
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </div>
                                 </div>
                             </form>
                             <form action="" class="form-register">
                                 <h2>Create an Account</h2>
                                 <div class="input-group">
-                                    <input type="text" required />
-                                    <label for="">Your Email</label>
+                                    <input id="email" type="text" required />
+                                    <label for="email">Your Email</label>
                                 </div>
                                 <div class="input-group">
-                                    <input type="text" required />
-                                    <label for="">Name</label>
+                                    <input id="name" type="text" required />
+                                    <label for="name">Name</label>
                                 </div>
                                 <div class="input-group">
-                                    <input type="password" required />
-                                    <label for="">Password</label>
+                                    <input
+                                        id="password"
+                                        type="password"
+                                        required
+                                    />
+                                    <label for="password">Password</label>
                                 </div>
                                 <div class="input-group">
-                                    <input type="password" required />
-                                    <label for="">Repeat Password</label>
+                                    <input id=repeat"" type="password" required
+                                    />
+                                    <label for="repeat">Repeat Password</label>
                                 </div>
                                 <div class="form-row">
                                     <label class="label-hamburger"
@@ -104,7 +144,8 @@
                                 <p>
                                     You'll receive a confirmation email in your
                                     inbox with a link to activate your account.
-                                    If you have any problems, contact us!/p>
+                                    If you have any problems,
+                                    <span>contact us</span>!
                                 </p>
                             </form>
                         </div>
